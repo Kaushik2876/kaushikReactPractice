@@ -13,7 +13,6 @@ const Root =()=> {
   return (
       <Router>
         <Link to="/">Home page.</Link>
-
         <Link to="/about">About page.</Link>
         <Routes>
         <Route path="/" element={<Home/>} exact/>

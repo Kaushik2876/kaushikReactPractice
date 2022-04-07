@@ -1,11 +1,34 @@
-
+import "./index.css";
+ 
 const About = ()=>{
-    // console.log('dfsdf');
-    
+    // let curDate : any = new Date(2022 , 4 , 7 , 6);   // manually set date and time
+
+    let curDate : any = new Date();
+    curDate= curDate.getHours();
+
+    let greeting = '';
+    const cssStyle: any= { };
+
+    if(curDate >= 1 && curDate <=12){
+        greeting = 'Good Morning'
+        cssStyle.color = 'green'
+    }
+    else if(curDate >= 12 && curDate < 19){
+        greeting = 'Good Afternoon'
+        cssStyle.color = 'Orange'
+
+    }else{
+        greeting = 'Good Night'
+        cssStyle.color = 'blue'
+
+    }
+
     return(
-        <div>
-            <h1>About page.</h1>
+        <>
+        <div id="aboutDiv">
+            <h1 id="aboutH1">Hello Sir, <span style={cssStyle}>{greeting} </span></h1>
         </div>
+        </>
     )
 };
 export default About;

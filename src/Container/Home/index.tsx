@@ -1,8 +1,15 @@
 import  { useState } from "react";
 import imagedata from "./Data";
+import './index.css'
+
+
 
 const Home = () => {
   const [items] = useState(imagedata);
+
+  const kd :{} ={         // type object
+    color:"red",         //inline css
+  }
 
   return (
     <>
@@ -17,8 +24,8 @@ const Home = () => {
               <div className="col-sm-4">
                 <div className="card">
                   <div className="card-body">
-                    <img src={image} alt="not found"></img>
-                    <h3 className="card-title">{name}</h3>
+                    <img id="img" src={image} alt="not found"/>
+                    <h3 className="card-title" style={kd}>{name}</h3>
                     <h3 className="card-title">{price}</h3>
                     <button className="btn btn-primary">Buy</button>
                   </div>
