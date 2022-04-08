@@ -3,6 +3,11 @@ import UserDetails from "Components/userDetails";
 import { studentdata } from "Container/Home";
 import { Fragment } from "react";
 import { useState } from "react"; //option 2
+
+
+
+
+
 const User = (props: any) => {
   const [data, setData] = useState<IUserInfo[]>(studentdata);
   const singleStudent = studentdata.find((i) => i.id === 5);

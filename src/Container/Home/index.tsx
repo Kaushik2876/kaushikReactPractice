@@ -1,11 +1,16 @@
 import  { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { useHistory} from "react-router-dom";
 import imagedata from "./Data";
-import './index.css'
-
 
 
 const Home = () => {
   const [items] = useState(imagedata);
+
+  const history = useNavigate();
+const handleClick = (id : number) => {
+  history(`/product/${id}`);
+ }
 
   const kd :{} ={         // type object
     color:"red",         //inline css
@@ -19,10 +24,10 @@ const Home = () => {
         <div className="row">
           {
           items.map((elm) => {
-            const { image, name, price } = elm;
+            const { id,image, name, price } = elm;
             return (
               <div className="col-sm-4">
-                <div className="card">
+                <div className="card" onClick={()=>handleClick(id)}>
                   <div className="card-body">
                     <img id="img" src={image} alt="not found"/>
                     <h3 className="card-title" style={kd}>{name}</h3>

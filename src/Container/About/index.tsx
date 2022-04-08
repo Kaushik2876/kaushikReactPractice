@@ -1,4 +1,4 @@
-import "./index.css";
+// import "./index.css";
  
 const About = ()=>{
     // let curDate : any = new Date(2022 , 4 , 7 , 6);   // manually set date and time
