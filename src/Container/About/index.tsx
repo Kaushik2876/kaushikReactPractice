@@ -9,7 +9,7 @@ const About = ()=>{
     let greeting = '';
     const cssStyle: any= { };
 
-    if(curDate >= 1 && curDate <=12){
+    if(curDate >= 1 && curDate < 12){
         greeting = 'Good Morning'
         cssStyle.color = 'green'
     }

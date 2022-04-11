@@ -9,15 +9,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import App from "./App"
 import View from "Container/Home/View";
+import TodoApp from "TodoApp/ToApp";
 
 const Root =()=> {
   // console.log("Root")
   return (
       <Router>
-        <Link to="/">Home page  </Link>
-        <Link to="/about">About page  </Link>
-        <Link to="/User">User page  </Link>
-        <Link to="/cdata">Company page  </Link>
+        <button><Link to="/">Home page  </Link></button>
+        <button><Link to="/about">About page  </Link></button>
+        <button><Link to="/User">User page  </Link></button>
+        <button><Link to="/cdata">Calculate page  </Link></button>
+        <button><Link to="/toDoApp">ToDoApp </Link></button>
+
         <Routes>
         <Route path="/" element={<Home/>} exact/>
         <Route path="/about" element={<About/>} exact/>
@@ -25,6 +28,10 @@ const Root =()=> {
         <Route path="/myLocation" element={<Loc/>} exact/> 
         <Route path="/cdata" element={<App/>}/>
         <Route path="product/:productId" element={<View/>}/>
+        
+        <Route path="/toDoApp" element={<TodoApp/>} exact/>
+        
+
         </Routes>
       </Router>
   
