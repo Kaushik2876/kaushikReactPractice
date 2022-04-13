@@ -1,6 +1,5 @@
 import { FaTrash } from "react-icons/fa";
 
-
 const Olcom = (props:any) =>{
     return (
     <>

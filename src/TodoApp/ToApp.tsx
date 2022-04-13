@@ -1,33 +1,48 @@
 import  { useState } from "react";
 import Olcom from "./Olcom";
+import { useFormik } from 'formik';
 import { BiMessageSquareAdd } from "react-icons/bi";
-
+import * as Yup from 'yup';
 
 
 const TodoApp = () => {
-  const [inputList, setInputList] = useState("");
+  // const [inputList, setInputList] = useState("");
   const [items, setItems] = useState<any>([]);
-
-  const itemEvent = (event: any) => {
-    setInputList(event.target.value);
-  };
+  const formik = useFormik({
+    enableReinitialize:true,
+    initialValues: {
+      inputList: '',
+    },
+    validationSchema:Yup.object().shape({
+      inputList:  Yup.string().required('Please input value')
+    }),
+    onSubmit: (values,{resetForm}) => {
+      resetForm({values})
+      listData()      
+    },
+  });
+  const { values, handleChange, errors } = formik
+  console.log(values,"values");
+  
+  // const itemEvent = (event:any) => {
+  //   setInputList(event.target.value);
+  // };
     const listData = () => {
-        setItems((oldItems:any) => [...oldItems,inputList]
+        setItems((oldItems:any) => [...oldItems,values.inputList]
         );
-      setInputList('');
     };
 
     const deleteItems = (id: number) => {
 
-      setItems((oldItems:any) =>{
-        return oldItems.filter((_arrElm:any,index:any) =>{
+      setItems((oldItems: any[]) =>{
+        return oldItems.filter((_arrElm,index) =>{
           return index !== id;
         });
       });
     }
   // console.log(listData)
   return (
-    <>
+    <form onSubmit={formik.handleSubmit}>
       <div className="main_div">
         <div className="center_div">
           <br />
@@ -35,15 +50,18 @@ const TodoApp = () => {
           <br />
           <input
             className="inputapp"
-            type="text" value={inputList}
+            type="text" 
             placeholder="Add a items"
-            onChange={itemEvent}
+            value={values.inputList}
+            name="inputList"
+            onChange={handleChange}
           />
-          <BiMessageSquareAdd className="icon_style" onClick={listData} />
+          {errors.inputList}
+          <BiMessageSquareAdd className="icon_style" onClick={()=>formik.handleSubmit()} />
           <ol className="listapp">
             {/* <li className="liApp"> {} </li> */}
             {items?.map((itemval:any,index:number) => {
-             return <Olcom  key={index}
+             return <Olcom key={index}
              id={index}
              text  = {itemval}
              onSelect={deleteItems}
@@ -52,7 +70,7 @@ const TodoApp = () => {
           </ol>
         </div>
       </div>
-    </>
+    </form>
   );
 };
 
