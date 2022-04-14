@@ -11,6 +11,7 @@ import App from "./App"
 import View from "Container/Home/View";
 import TodoApp from "TodoApp/ToApp";
 import FormValid from "Container/Formvalidate/FormValid";
+import EnexPage from "Enexpage/Enexpage";
 
 const Root =()=> {
   // console.log("Root")
@@ -22,6 +23,7 @@ const Root =()=> {
         <button><Link to="/cdata">Calculate page  </Link></button>
         <button><Link to="/toDoApp">ToDoApp </Link></button>
         <button><Link to="/formValid">Form </Link></button>
+        <button><Link to="/enexpage">EnexPage</Link></button>
 
 
         <Routes>
@@ -33,7 +35,7 @@ const Root =()=> {
         <Route path="product/:productId" element={<View/>}/>
         <Route path="/toDoApp" element={<TodoApp/>} exact/>
         <Route path="/formValid" element={<FormValid/>} exact/>
-        
+        <Route path="/enexpage" element={<EnexPage/> } exact/>
 
         </Routes>
       </Router>

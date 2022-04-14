@@ -34,7 +34,6 @@ const FormValid = (()=> {
     confirmPassword: "",
     email: "",
     mobile: "",
-      // initialVal:'',
     },
     validationSchema: Yup.object().shape({
       fName: Yup.string().required('First Name is a required field'),
