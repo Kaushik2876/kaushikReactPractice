@@ -1,24 +1,39 @@
 import  { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { useHistory} from "react-router-dom";
 import imagedata from "./Data";
+import Layout from "Container/GlobalLayout/GlobalLayout";
+
 
 const Home = () => {
   const [items] = useState(imagedata);
 
+  const history = useNavigate();
+const handleClick = (id : number) => {
+  history(`/product/${id}`);
+ }
+
+  const kd :{} ={         // type object
+    color:"red",         //inline css
+  }
+
   return (
-    <>
-      <h1>Home page.</h1>
+
+    <Layout>
+      
+      <h1 id="H1">Mobile Page</h1>
 
       <div className="container">
         <div className="row">
           {
           items.map((elm) => {
-            const { image, name, price } = elm;
+            const { id,image, name, price } = elm;
             return (
               <div className="col-sm-4">
-                <div className="card">
+                <div className="card" onClick={()=>handleClick(id)}>
                   <div className="card-body">
-                    <img src={image} alt="not found"></img>
-                    <h3 className="card-title">{name}</h3>
+                    <img id="img" src={image} alt="not found"/>
+                    <h3 className="card-title" style={kd}>{name}</h3>
                     <h3 className="card-title">{price}</h3>
                     <button className="btn btn-primary">Buy</button>
                   </div>
@@ -28,7 +43,7 @@ const Home = () => {
           })}
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

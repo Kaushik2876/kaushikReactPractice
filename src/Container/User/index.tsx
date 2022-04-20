@@ -1,18 +1,25 @@
 // import React ,{useState} from "react";       //option 1
 import UserDetails from "Components/userDetails";
+import Layout from "Container/GlobalLayout/GlobalLayout";
 import { studentdata } from "Container/Home";
-import { Fragment } from "react";
 import { useState } from "react"; //option 2
+import { useSelector} from 'react-redux';
+
+
+
 const User = (props: any) => {
   const [data, setData] = useState<IUserInfo[]>(studentdata);
   const singleStudent = studentdata.find((i) => i.id === 5);
   console.log(data, "data");
 //   console.log(setData);
   console.log(props);
+  const {counter} = useSelector((state:{counter:any}) => state?.counter);
 
 
   return (
-    <Fragment>            
+    <Layout> 
+      <h1>User:{counter}</h1>
+      <h2>------------------</h2>
       {singleStudent && <UserDetails {...singleStudent} />}           
       {data.map((student) => (
         <UserDetails
@@ -31,7 +38,7 @@ const User = (props: any) => {
           title="xyz"
         />
       ))}
-    </Fragment>
+    </Layout>
   );
 };
 

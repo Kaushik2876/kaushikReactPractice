@@ -1,17 +1,20 @@
 // import logo from './logo.svg';
-import "./App.css";
-import Hello from "./Hello";
+import {add,sub,mul,div} from 'Container/Map_Filter/Com'
+// import Header  from "Container/HeaderFile/HeaderFile";
+import Layout from "Container/GlobalLayout/GlobalLayout";
+
+
 function App() {
-  function Apple() {
-    return <div>HEllo Apple Component</div>;
-  }
   return (
-    <div className="App">
-      <h1>Hello World Hello React </h1>
-      <Hello />
-      {Apple()}          
-      <Apple />
-    </div>
+    <Layout>
+    {/* <Header/> */}
+    <ul>
+        <li>sum of Two number is : {add(30,30)}</li>
+        <li>sub of Two number is : {sub(30,10)}</li>
+        <li>mul of Two number is : {mul(30,30)}</li>
+        <li>div of Two number is : {div(30,13)}</li>
+    </ul>
+    </Layout>
   );
 }
 
