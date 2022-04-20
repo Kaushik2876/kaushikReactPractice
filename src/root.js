@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { BrowserRouter as Router,Routes,Link, Route} from "react-router-dom";
+import { BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import About from "Container/About";
 import Home from "Container/Home";
 import User from "Container/User/index";
@@ -12,20 +13,15 @@ import View from "Container/Home/View";
 import TodoApp from "TodoApp/ToApp";
 import FormValid from "Container/Formvalidate/FormValid";
 import EnexPage from "Enexpage/Enexpage";
+import store from "redux/store";
+import Redux from "redux/redux";
+import { Provider } from 'react-redux'
 
 const Root =()=> {
   // console.log("Root")
   return (
+    <Provider store={store}>
       <Router>
-        <button><Link to="/">Home page  </Link></button>
-        <button><Link to="/about">About page  </Link></button>
-        <button><Link to="/User">User page  </Link></button>
-        <button><Link to="/cdata">Calculate page  </Link></button>
-        <button><Link to="/toDoApp">ToDoApp </Link></button>
-        <button><Link to="/formValid">Form </Link></button>
-        <button><Link to="/enexpage">EnexPage</Link></button>
-
-
         <Routes>
         <Route path="/" element={<Home/>} exact/>
         <Route path="/about" element={<About/>} exact/>
@@ -36,10 +32,11 @@ const Root =()=> {
         <Route path="/toDoApp" element={<TodoApp/>} exact/>
         <Route path="/formValid" element={<FormValid/>} exact/>
         <Route path="/enexpage" element={<EnexPage/> } exact/>
-
+        <Route path="/redux" element={<Redux/> } exact/>
         </Routes>
       </Router>
-  
+      
+      </Provider>
   );
 }
 

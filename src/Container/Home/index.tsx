@@ -2,6 +2,7 @@ import  { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { useHistory} from "react-router-dom";
 import imagedata from "./Data";
+import Layout from "Container/GlobalLayout/GlobalLayout";
 
 
 const Home = () => {
@@ -17,8 +18,10 @@ const handleClick = (id : number) => {
   }
 
   return (
-    <>
-      <h1>Home page.</h1>
+
+    <Layout>
+      
+      <h1 id="H1">Mobile Page</h1>
 
       <div className="container">
         <div className="row">
@@ -40,7 +43,7 @@ const handleClick = (id : number) => {
           })}
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

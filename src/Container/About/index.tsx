@@ -1,5 +1,9 @@
 // import "./index.css";
 // import { useFormik } from 'formik';
+
+import Layout from "Container/GlobalLayout/GlobalLayout";
+
+
 const About = ()=>{
     // let curDate : any = new Date(2022 , 4 , 7 , 6);   // manually set date and time
 
@@ -24,11 +28,11 @@ const About = ()=>{
     }
 
     return(
-        <>
+        <Layout>
         <div id="aboutDiv">
             <h1 id="aboutH1">Hello Sir, <span style={cssStyle}>{greeting} </span></h1>
         </div>
-        </>
+        </Layout>
     )
 };
 export default About;

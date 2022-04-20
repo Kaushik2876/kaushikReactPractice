@@ -149,9 +149,16 @@ span{
 
 /* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
 
+#H1{
+  text-align: center;
+  color: rgb(116, 32, 32);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.7;
+}
+
 .login-page {
   width: 360px;
-  padding: 8% 0 0;
+  padding: 1% 0 0;
   margin: auto;
 }
 .form {
@@ -269,6 +276,11 @@ body {
   font-size:30px;
   color:white;
 }
+#icon{
+  margin-top:18px ;
+  font-size:30px ;
+  color:white ;
+}
 .font1{
   margin-top:17px;
   font-size: 20px;
@@ -341,4 +353,40 @@ body {
 }
 .table{
   background-color: white;
+}
+#btn{
+  background-color:transparent;
+  padding: 10px 15px;
+  border: none;
+}
+/* .side-bar-menu--wrapper{
+} */
+.side-bar-menu{
+  list-style: none;
+  padding-left: 0;
+  position:fixed;
+  width:240px;
+  top:70px ;
+  right:0;
+    height: calc(100vh - 70px);
+    background-color:#ffffff;
+    border-left: 1px solid ;
+    box-shadow: 0 8px 18px 0 rgba(96, 75, 75, 0.2);
+    z-index: 11;
+}
+.li-style{
+  font-size:22px;
+  text-align: justify;
+  margin-top:5px;
+  padding-left:15px;
+}
+.li-style a:hover{
+  color:#742525
+}
+.li-style a{
+  text-decoration: none;
+}
+.counter{
+  margin-top: 10%;
+  text-align: center;
 }

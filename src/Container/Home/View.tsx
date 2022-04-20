@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import imagedata from "./Data";
 
@@ -6,8 +7,12 @@ import imagedata from "./Data";
 const View = () => {
   const { productId } = useParams();
   const detail = imagedata.find(({ id }) => id === Number(productId));
+
+  
+
   return (
     <>
+    
       <div className="container">
         <div className="row">
           <div className="col-sm-6">

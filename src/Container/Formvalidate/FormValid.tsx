@@ -1,6 +1,8 @@
 import Input from "Components/FormComponent/Input";
 import { useFormik,  FormikProvider } from "formik";
 import * as Yup from "yup";
+import Layout from "Container/GlobalLayout/GlobalLayout";
+
 
 const FormValid = (()=> {
 
@@ -51,6 +53,7 @@ const FormValid = (()=> {
   const {handleSubmit,errors} =formik
   console.log(errors);
     return(
+      <Layout>
       <FormikProvider value={formik}>
       <form onSubmit={handleSubmit}>
       <div className="login-page">
@@ -68,6 +71,7 @@ const FormValid = (()=> {
 </div>
 </form>
 </FormikProvider>
+</Layout>
     );
 })
 

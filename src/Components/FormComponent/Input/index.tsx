@@ -16,4 +16,4 @@ const Input = ({
             </Field>
     )
 }
-export default Input
+export default Input;

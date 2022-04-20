@@ -3,6 +3,7 @@ import Olcom from "./Olcom";
 import { useFormik } from 'formik';
 import { BiMessageSquareAdd } from "react-icons/bi";
 import * as Yup from 'yup';
+import Layout from "Container/GlobalLayout/GlobalLayout";
 
 
 const TodoApp = () => {
@@ -42,6 +43,7 @@ const TodoApp = () => {
     }
   // console.log(listData)
   return (
+    <Layout>
     <form onSubmit={formik.handleSubmit}>
       <div className="main_div">
         <div className="center_div">
@@ -71,6 +73,7 @@ const TodoApp = () => {
         </div>
       </div>
     </form>
+    </Layout>
   );
 };
 
