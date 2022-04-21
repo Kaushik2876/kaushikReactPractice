@@ -16,10 +16,15 @@ import EnexPage from "Enexpage/Enexpage";
 import store from "redux/store";
 import Redux from "redux/redux";
 import { Provider } from 'react-redux'
+import App1 from "UseQuery/App";
+import { QueryClient, QueryClientProvider} from 'react-query'
 
+const queryClient = new QueryClient()
 const Root =()=> {
+  
   // console.log("Root")
   return (
+    <QueryClientProvider client={queryClient}>
     <Provider store={store}>
       <Router>
         <Routes>
@@ -33,10 +38,12 @@ const Root =()=> {
         <Route path="/formValid" element={<FormValid/>} exact/>
         <Route path="/enexpage" element={<EnexPage/> } exact/>
         <Route path="/redux" element={<Redux/> } exact/>
+        <Route path="/query" element={<App1/> } exact/>
         </Routes>
       </Router>
       
       </Provider>
+      </QueryClientProvider>
   );
 }
 

@@ -7,12 +7,8 @@ import imagedata from "./Data";
 const View = () => {
   const { productId } = useParams();
   const detail = imagedata.find(({ id }) => id === Number(productId));
-
   
-
-  return (
-    <>
-    
+  return (   
       <div className="container">
         <div className="row">
           <div className="col-sm-6">
@@ -31,7 +27,6 @@ const View = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

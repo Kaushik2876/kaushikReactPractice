@@ -16,7 +16,6 @@ const Header = () => {
         <div className="row">
           <div className="col-sm-2">
             <img className="imgsize" src={image} alt="not found" />
-            {/* style="height: 70px; width: 80px; margin-left: 85px;" */}
           </div>
           <div className="col-sm-7"> </div>
           <div className="col-sm-3">
@@ -47,6 +46,7 @@ const Header = () => {
         <li className="li-style"><Link to="/formValid">Form </Link></li>
         <li className="li-style"><Link to="/enexpage">EnexPage</Link></li>
         <li className="li-style"><Link to="/redux">Redux Counter</Link></li>
+        <li className="li-style"><Link to="/query">Query 1</Link></li>
         </ul>}
       </div>
             </ul>

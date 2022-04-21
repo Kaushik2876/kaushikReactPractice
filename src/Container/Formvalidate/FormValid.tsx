@@ -5,27 +5,6 @@ import Layout from "Container/GlobalLayout/GlobalLayout";
 
 
 const FormValid = (()=> {
-
-  // validationSchema = Yup.object({
-  //   fName: Yup.string().required(),
-  //   lName: Yup.string().required(),
-  //   username: Yup.string().required(),
-  //   password: Yup.string().required(),
-  //   confirmPassword: Yup.string().required().oneOf([Yup.ref("password"), null], "Passwords must match"),
-  //   email: Yup.string().email().required(),
-  //   mobile: Yup.number().max(10,"").required(),
-  // });
-
-//  const initialVal = {
-//     fName: "",
-//     lName: "",
-//     username: "",
-//     password: "",
-//     email: "",
-//     mobile: "",
-//     validationSchema: "",
-//   };
-
   const formik = useFormik ({
     enableReinitialize:true,      
     initialValues : {
