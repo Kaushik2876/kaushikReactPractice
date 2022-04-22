@@ -1,13 +1,14 @@
 import { useQuery } from "react-query"
 
 
+
 const Query1 = () => {
     const { isLoading, error ,data}  = useQuery('repoData', () =>
      fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
        res.json()
      )
    )
-console.log(data);
+// console.log(data);
 
 
   if(error ) return <div>' An error  occurred: ' + error.message</div>
@@ -16,7 +17,7 @@ console.log(data);
           
           <div>
             <h2>{data.id}</h2>
-            <p>{data.description}</p>
+            <p>{data.name}</p>
           </div>
         );
 }
