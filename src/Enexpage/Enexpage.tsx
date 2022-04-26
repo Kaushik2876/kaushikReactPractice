@@ -3,6 +3,7 @@ import { FiSettings, FiSliders } from "react-icons/fi";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EnexTable from "./EnexTable";
 import Layout from "Container/GlobalLayout/GlobalLayout";
+import TableApi from "./enexTableApi";
 // import { useState } from "react";
 
 
@@ -69,6 +70,9 @@ const EnexPage = () => {
       <div className="container-fluid table">
         <EnexTable/>
       </div>
+      
+      <TableApi/>
+     
     </Layout>
   );
 };

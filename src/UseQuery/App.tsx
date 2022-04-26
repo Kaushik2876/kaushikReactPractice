@@ -6,7 +6,7 @@ import Query1 from 'UseQuery';
 const App1 =()=>{
     return (
         <Layout>
-          <Query1 />
+          <Query1/>
           <Axios/>
         </Layout>
       )

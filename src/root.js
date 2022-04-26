@@ -18,6 +18,7 @@ import Redux from "redux/redux";
 import { Provider } from 'react-redux'
 import App1 from "UseQuery/App";
 import { QueryClient, QueryClientProvider} from 'react-query'
+import ContextExample from "Context";
 
 const queryClient = new QueryClient()
 const Root =()=> {
@@ -39,6 +40,7 @@ const Root =()=> {
         <Route path="/enexpage" element={<EnexPage/> } exact/>
         <Route path="/redux" element={<Redux/> } exact/>
         <Route path="/query" element={<App1/> } exact/>
+        <Route path="/query2" element={<ContextExample />} exact/>
         </Routes>
       </Router>
       

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-  const image: any = require("Asset/img/logo.jpg");
+  const image: any = require("Asset/img/logo1.png");
   let name = "Mark";
 
   const toggleMenu=()=>{
@@ -46,7 +46,7 @@ const Header = () => {
         <li className="li-style"><Link to="/formValid">Form </Link></li>
         <li className="li-style"><Link to="/enexpage">EnexPage</Link></li>
         <li className="li-style"><Link to="/redux">Redux Counter</Link></li>
-        <li className="li-style"><Link to="/query">Query 1</Link></li>
+        <li className="li-style"><Link to="/query">Query API</Link></li>
         </ul>}
       </div>
             </ul>
