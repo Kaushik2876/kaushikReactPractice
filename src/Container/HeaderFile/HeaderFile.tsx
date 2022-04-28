@@ -47,6 +47,7 @@ const Header = () => {
         <li className="li-style"><Link to="/enexpage">EnexPage</Link></li>
         <li className="li-style"><Link to="/redux">Redux Counter</Link></li>
         <li className="li-style"><Link to="/query">Query API</Link></li>
+        <li className="li-style"><Link to="/useEffect1">UseEffect</Link></li>
         </ul>}
       </div>
             </ul>

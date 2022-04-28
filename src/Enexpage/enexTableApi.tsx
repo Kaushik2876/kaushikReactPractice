@@ -2,28 +2,24 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const TableApi = () => {
-  // const [name , setName] = useState();
-  // const [id , setId] = useState();
-  // const [email , setEmail] = useState();
+
   const [data, setData] = useState<any>([]);
 
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get("https://jsonplaceholder.typicode.com/users");
       console.log(res.data);
-      // setId(res.data.id);
-      //         // setName(res.data.name);
-      //         // setEmail(res.data.email);
+
       setData(res.data);
     };
     getData();
-  });
+  },[]);
   return (
     <>
       {/* <h2 className="text-center" style={{color: 'darkcyan'}}>Api Table</h2> */}
-      <div className="container mt-5">
+      <div className="container">
         <div className="main-heding">
-          <h2 className="mb-5 text-center">
+          <h2 className="text-center">
             <span className="font-weight-bold ">ApI</span> Table
           </h2>
         </div>

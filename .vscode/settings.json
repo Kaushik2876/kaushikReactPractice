@@ -3,11 +3,13 @@
         "Filt",
         "fontawesome",
         "fortawesome",
+        "heightcount",
         "Mindtree",
         "myapp",
         "myloaction",
         "Paytm",
         "singimg",
-        "studentdata"
+        "studentdata",
+        "widthcount"
     ]
 }

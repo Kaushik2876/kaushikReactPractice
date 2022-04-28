@@ -19,6 +19,7 @@ import { Provider } from 'react-redux'
 import App1 from "UseQuery/App";
 import { QueryClient, QueryClientProvider} from 'react-query'
 import ContextExample from "Context";
+import UseEffect1 from "Container/useEffect/useEffect1";
 
 const queryClient = new QueryClient()
 const Root =()=> {
@@ -41,6 +42,7 @@ const Root =()=> {
         <Route path="/redux" element={<Redux/> } exact/>
         <Route path="/query" element={<App1/> } exact/>
         <Route path="/query2" element={<ContextExample />} exact/>
+        <Route path="/useEffect1" element={<UseEffect1 />} exact/>
         </Routes>
       </Router>
       
