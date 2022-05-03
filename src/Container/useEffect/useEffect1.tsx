@@ -1,3 +1,4 @@
+import Layout from "Container/GlobalLayout/GlobalLayout";
 import { useEffect, useState } from "react";
 
 //using clean up function
@@ -21,10 +22,10 @@ const UseEffect1 = () => {
         }
     });
     return (
-        <div>
+        <Layout>
             <p className="text-center"> The Actual size of Your screen.</p>
             <h1 className="text-center">{heightCount} X {widthCount}</h1>
-        </div>
+        </Layout>
     )
 }
 

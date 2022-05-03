@@ -20,6 +20,7 @@ import App1 from "UseQuery/App";
 import { QueryClient, QueryClientProvider} from 'react-query'
 import ContextExample from "Context";
 import UseEffect1 from "Container/useEffect/useEffect1";
+import SearchItems from "SearchItems/search";
 
 const queryClient = new QueryClient()
 const Root =()=> {
@@ -43,6 +44,9 @@ const Root =()=> {
         <Route path="/query" element={<App1/> } exact/>
         <Route path="/query2" element={<ContextExample />} exact/>
         <Route path="/useEffect1" element={<UseEffect1 />} exact/>
+        <Route path="/context" element={<ContextExample />} exact/> 
+        <Route path="/search" element={<SearchItems />} exact/> 
+
         </Routes>
       </Router>
       

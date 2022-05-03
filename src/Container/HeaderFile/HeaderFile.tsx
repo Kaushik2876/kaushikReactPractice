@@ -1,12 +1,12 @@
 import { FaAlignJustify, FaEnvelopeSquare, FaRegBell } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
   const image: any = require("Asset/img/logo1.png");
   let name = "Mark";
-
+const navigate = useNavigate();
   const toggleMenu=()=>{
     setIsOpen(!isOpen)
   }
@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container-fluid enexcontainer">
         <div className="row">
           <div className="col-sm-2">
-            <img className="imgsize" src={image} alt="not found" />
+            <img className="imgsize" src={image} onClick={()=> navigate('/')} alt="not found" />
           </div>
           <div className="col-sm-7"> </div>
           <div className="col-sm-3">
@@ -48,6 +48,8 @@ const Header = () => {
         <li className="li-style"><Link to="/redux">Redux Counter</Link></li>
         <li className="li-style"><Link to="/query">Query API</Link></li>
         <li className="li-style"><Link to="/useEffect1">UseEffect</Link></li>
+        <li className="li-style"><Link to="/context">Context</Link></li>
+        <li className="li-style"><Link to="/search">SearchItems </Link></li>
         </ul>}
       </div>
             </ul>

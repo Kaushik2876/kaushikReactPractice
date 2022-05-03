@@ -1,3 +1,4 @@
+import Layout from "Container/GlobalLayout/GlobalLayout";
 import { createContext } from "react";
 import ComA from "./ComA";
 
@@ -7,13 +8,13 @@ const LastName = createContext('');
 
 const ContextExample = () =>{
     return(
-        <>
+        <Layout>
         <FirstName.Provider value={"KAUSHIK"}>
             <LastName.Provider value={"Prajapati"}>
                 <ComA/>
             </LastName.Provider>
         </FirstName.Provider>
-        </>
+        </Layout>
     )
 } 
 
