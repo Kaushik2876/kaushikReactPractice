@@ -11,12 +11,12 @@ const SearchItems = ()=> {
     }
     return(
         <Layout>
-            <div className="searchbar">
+            <div className="searchBar">
                 <input type="text" placeholder="Search Anything" 
                 value={img}
                 onChange={inputEvnet}
                 />
-                <br/>
+                <br/><br/>
                 <Sresult name={img}/>
             </div>
         </Layout>
